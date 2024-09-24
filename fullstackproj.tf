@@ -15,7 +15,7 @@ variable "environment_name" {
   type  = string
   }
 resource "aws_s3_bucket" "app_bucket" {
-  bucket = "myapp-${var.environment_name}-bucket"
+  bucket = "yusuf-myapp-${var.environment_name}-bucket"
 
   versioning {
    enabled = true
