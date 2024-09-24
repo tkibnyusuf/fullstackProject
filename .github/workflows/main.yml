@@ -21,7 +21,7 @@ jobs:
       - run: cd codebase/rdicidr-0.1.0 && npm run prettier
       - run: cd codebase/rdicidr-0.1.0 && npm run test
       - run: cd codebase/rdicidr-0.1.0 && npm run build --if-present
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
          name: my-artifact
          path: codebase/rdicidr-0.1.0/build
