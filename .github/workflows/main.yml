@@ -15,7 +15,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'
+          node-version: '15.x'
       - run: cd codebase/rdicidr-0.1.0 && npm install
       - run: cd codebase/rdicidr-0.1.0 && npm run lint
       - run: cd codebase/rdicidr-0.1.0 && npm run prettier
