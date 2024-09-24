@@ -52,6 +52,7 @@ resource "aws_s3_object" "build_files" {
   key    = each.value
   source = "/home/runner/work/fullstackProject/fullstackProject/codebase/rdicidr-0.1.0/build/${each.value}"
   acl = "public-read"
+}
 
 output "bucket_url" {
    value = aws_s3_bucket.app_bucket.website_endpoint
