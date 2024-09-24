@@ -46,7 +46,7 @@ resource "aws_s3_bucket_public_access_block" "example" {
 }
 
 resource "aws_s3_object" "object" {
-  for_each = fileset ("home/runner/work/fullstackproject/fullstackproject/build", "**")
+  for_each = fileset("home/runner/work/fullstackproject/fullstackproject/build", "**")
   bucket = aws_s3_bucket.app_bucket.bucket
   key    = "each.value"
   source = "home/runner/work/fullstackproject/fullstackproject/build/${each.value}"
