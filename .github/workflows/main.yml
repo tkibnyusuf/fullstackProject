@@ -33,7 +33,7 @@ jobs:
     steps: 
      - name: deploy to dev
        uses: actions/checkout@v4
-     - uses: actions/dowload-artifact@v3
+     - uses: actions/download-artifact@v3
        with:
          name: my-artifact
          path: codebase/rdicidr-0.1.0/build
