@@ -52,7 +52,7 @@ resource "aws_s3_object" "build_files" {
   key    = each.value
   source = "/home/runner/work/fullstackProject/fullstackProject/codebase/rdicidr-0.1.0/build/${each.value}"
   acl = "public-read"
-# Set content-type based on file extension
+ # Set content-type based on file extension
   content_type = lookup(
     {
       ".html" = "text/html",
@@ -63,9 +63,9 @@ resource "aws_s3_object" "build_files" {
       ".jpg"  = "image/jpeg"
     },
     substr(each.value, length(each.value) - 5, 5),
-    "application/octet-stream" # Default if not matched
-  )
-}
+    "application/octet-stream" # Default if not matched
+  )
+  }
 
 output "bucket_url" {
    value = aws_s3_bucket.app_bucket.website_endpoint
