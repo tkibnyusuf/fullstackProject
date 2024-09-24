@@ -55,8 +55,8 @@ resource "aws_s3_object" "object" {
   acl = "public-read"
 }
 
-outpt "bucket_url"
+output "bucket_url" {
    value = aws_s3_bucket.app_bucket.website_endpoint
-  
+  }
 
   
